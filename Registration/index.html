@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
+    <title>Register for Cents for Change</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,8 +11,14 @@
   </head>
   <body>
 		
-        <div class="container">
+        <div class="container" style="max-width: 860px;">
 			<form style="width: 100%">
+                <div class="row">
+                    <h1 class="display-3">Register</h1>
+                </div>
+                <div class="row">
+                        <p>After you register, you will have access to editing your preferences, such as amount and frequency.</p>
+                </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="username">username</label>
@@ -49,16 +55,10 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<script>
 		$('#submit').click(function() {
-	
-				$.ajax({
-					type: "POST",
-					url: "some.php",
-					data: { name: $('#firstName').val() + " " + $('#lastName').val(), email: $('#email').val(), username: $('#username').val(), password: $('#password').val()}
-				}).done(function( msg ) {
-					alert( "Data Saved: " + msg );
-				});    
-				
-			});
+
+            $.post('url', { first: $('#firstName').val(), email: $('#email').val(), user: $('#username').val(), pass: $('#password').val()}, function(){alert("success"), JSON});
+
+        });
 	</script>
   </body>
 </html>
