@@ -8,49 +8,81 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style>
+        #form-container {
+            background: #2979ff;
+            padding: 10px;
+            margin: 0 auto;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0px 2px 2px;
+        }
+
+        form, input {
+            margin:0 auto;
+        }
+
+        label {
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
   </head>
   <body>
 		
         <div class="container" style="max-width: 860px;">
-			<form style="width: 100%">
+			
                 <div class="row">
-                    <h1 class="display-3">Register</h1>
+                    <h1 class="display-4">Register</h1>
                 </div>
                 <div class="row">
                         <p>After you register, you will have access to editing your preferences, such as amount and frequency.</p>
                 </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="username">username</label>
+                <form style="width: 100%">
+                        
+                <div class="container" style="max-width: 400px" id="form-container">
+                     <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="username">Username</label>
                             <input type="text" id="username" class="form-control">
                         </div>
-                        <div class="form-group col-md-4">
+                        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
                             <label for="password">Password</label>
                             <input type="password" id="password" class="form-control">    
-						</div>
-						<div class="form-group col-md-4">
-                            <label for="email">email</label>
+                        </div>
+                        </div>
+                        <div class="form-row">
+						<div class="form-group col-md-12">
+                            <label for="email">Email</label>
                             <input type="text" id="email" class="form-control">    
                         </div>
-					</div>
+                        </div>
 					<div class="form-row">
-						<div class="form-group col-md-6">
+						<div class="form-group col-md-12">
                             <label for="firstName">First Name</label>
                             <input type="text" id="firstName" class="form-control">
                         </div>
-                        <div class="form-group col-md-6">
+                        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
                             <label for="lastName">Last Name</label>
                             <input type="text" id="lastName" class="form-control">    
                         </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark" id="submit">Register</button>
 					</div>
-                    <button type="submit" class="btn btn-primary" id="submit">Register</button>
+
                 </form>
-			</form>
+            </div>
+            </div>
 		</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<script>
