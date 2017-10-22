@@ -77,7 +77,7 @@
                              </select>                       
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <button type="submit" class="btn btn-primary" id="submit">Save Changes</button>
                 </form>
             
             </div>
@@ -88,5 +88,27 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script>
+            var usrObj;
+            $(document).ready(function() {
+                usrObj = JSON.parse($.get('url', JSON));
+                $('#amount').html(usrObj.amountDonated);
+                $('#donationAmount').html(usrObj.amount);
+                $('#frequency').html(usrObj.frequency);
+                $('#amountBox').val(usrObj.amount);
+                if (usrObj.frequency == 1) {
+                    $('#dayBox').val("daily");
+                } else if (usrObj.frequency == 2) {
+                    $('#dayBox').val("weekly");
+                } else {
+                    $('#dayBox').val("biweekly");
+                }
+            })
+            $('#submit').click(function() {
+                usrObj.amountDonated = $('#amount').val();
+                usrObj.amount = $('#donationAmount').val();
+                $.post('url', {amount: usrObj.amount, amountDonated: usrObj.amountDonated});
+            })
+        </script>
     </body>
 </html>`	
