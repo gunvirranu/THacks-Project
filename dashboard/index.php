@@ -1,13 +1,22 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Hello, world!</title>
+        <title>Dashboard - Honest Deposit</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+        <style>
+
+            .row {
+                margin-bottom: 5px;
+            }
+        
+        </style>
+
     </head>
     <body>
 
@@ -17,9 +26,9 @@
 
         <div class="container">
 
-            <div class="row">
+            <div class="row" style="text-align: center">
 
-                <h1 style="text-align: center">Overview</h1>
+                <h1>Overview</h1>
 
             </div>
 
@@ -43,6 +52,34 @@
                     </div>
 				</div>
 				
+            </div>
+
+            <div class="row" style="text-align:center">
+
+                <h1>Settings</h1>
+
+            </div>
+
+            <div class="row">
+                
+                <form style="width: 100%">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="amountBox">Amount to Donate</label>
+                            <input type="number" class="form-control" id="amountBox" min="0.01" max="0.99">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="dayBox">Period of Donation</label>
+                            <select name="dayBox" class="form-control" id="dayBox">
+                                <option value="daily">daily</option>
+                                <option value="weekly">weekly</option>
+                                <option value="biweekly">biweekly</option>
+                             </select>                       
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            
             </div>
 
         </div>
